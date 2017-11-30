@@ -481,7 +481,7 @@ In that test we can use our documentation or prior experience to start filling i
         .verify.value(selectors.fields.hdr, data.goodData.input.hdr)
 ```
 
-Clearing any value that might already be in a field is never a bad idea - `setValue` appends the information we put in, so `clearValue` makes sure we're starting from a blank slate.  Then `verify.value` makes sure that the value of the input is indeed what we expectedd.
+Clearing any value that might already be in a field is never a bad idea - `setValue` appends the information we put in, so `clearValue` makes sure we're starting from a blank slate.  Then `verify.value` makes sure that the value of the input is indeed what we expected.
 
 You might wonder where I got `selectors.fields.hdr` and `data.goodData.input.hdr` -- if you recall, we required the `css_selectors.js` file's export at the top of the `tests.js` file and assigned it to the constant `selectors` - the same for `test_data.js` and `data`.  Just in that one code snipped, we needed the selector 3 times, and the data twice.  Now instead of having to type it in manually ever time, I have variables to reference if ever I need to update my test data.  There are other benefits to this we'll discuss another time!
 
@@ -823,6 +823,14 @@ functions.enterValue(selectors.fields.hdr, data.goodData.input.hdr, browser)
 ```
 
 Change the field names if you aren't using the `hdr`, like `mke`, `oai`, etc.
+
+Finally, we need to make sure our `browser` chain is still working...  We don't need the `browser` command above our `functions.enterValue()` calls, since `functions` is not part of the `browser` object.  So remove it from the start of your test, but make sure you call `browser` before `.click()` after you've entered all the fields, otherwise it'll tell you `.click()` is undefined.
+
+```js
+browser
+    .click(selectors.buttons.submit)
+    .pause(100)
+```
 
 </details>
 
