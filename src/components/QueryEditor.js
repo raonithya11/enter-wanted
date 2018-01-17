@@ -23,13 +23,17 @@ class QueryEditor extends Component {
   }
 
   handleChange(prop, val) {
+    let isBlank = false
     if (this.state.notModified) {
       this.setState({ notModified: false, validated: false })
     }
+    else
+      isBlank = true
     let queryCopy = Object.assign({}, this.state.query)
     queryCopy.fields[prop] = val
     queryCopy.updateField(prop, val)
-    this.setState({ query: queryCopy })
+    // let isBlank = this.state.query.checkIfBlank()
+    this.setState({ query: queryCopy, notModified: isBlank?true:false })
   }
 
   submit() {
@@ -48,7 +52,7 @@ class QueryEditor extends Component {
 
   render() {
     let inputs = this.props.fields.map(field => {
-      return <div>
+      return <div key={field.code}>
         <span className="fieldHeader" name={field.code + 'Header'}> {field.name} </span><br />
         <input className="inputField" name={field.code + 'Input'} value={this.state.query.fields[field.code]||''} onChange={(e) => { this.handleChange(field.code, e.target.value) }}></input>
       </div>
@@ -87,7 +91,7 @@ class QueryEditor extends Component {
             :
             <p id="noQuery"> Error Loading Query </p>
         }
-        <a id="versionNumber"> Version 1.8 </a>
+        <a id="versionNumber"> Version 2.2 </a>
 
       </div>
     )

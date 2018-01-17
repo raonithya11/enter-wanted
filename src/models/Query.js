@@ -58,13 +58,23 @@ export default class Query {
 
     this.valid = true             //query is valid until proven defective
     this.assembledQuery = ''      //assembled query is built when the fields are validated
-
+    this.checkIfBlank = this.checkIfBlank.bind(this)
     this.validateFields = this.validateFields.bind(this)
     this.updateField = this.updateField.bind(this)
   }
 
   updateField(code, val) {
     this.fields[code] = val;
+  }
+
+  checkIfBlank(){
+    let isBlank = true
+    let fieldNames = Object.getOwnPropertyNames(this.fields)
+    fieldNames.forEach(field=>{
+      if(this.fields[field]!=='')
+        isBlank = false
+    })
+    return isBlank
   }
 
   validateFields(fields) {
