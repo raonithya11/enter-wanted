@@ -378,6 +378,7 @@ For clarity's sake, especially in a test environment like this one that has all 
 
 <br />
 
+```js
 module.exports = {
     goodData: {
         input: {
@@ -437,6 +438,7 @@ module.exports = {
         }
     }
 }
+```
 
 </details>
 
