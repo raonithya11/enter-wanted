@@ -17,14 +17,14 @@ numeric: numbers only, 0-9
 special: these are any characters other than numbers and letters, including blank spaces ' ' - Periods '.' should not be allowed, as it will break message parsing.
 
 * Header: Required, 9-19 characters in length, any allowed
-* MKE: Required, 2-4 alpha/special characters in length
+* MKE: Required, 2-4 in length, alphabetical or special characters allowed
 * Originating Agency Identifier: Required, 9 alphanumeric characters in length
 * Name: Required, 1-30 characters in length, any allowed
 * Sex: Required, 1 character in length, alphabet only, F (female) M (male) and U (unknown) are the only accepted entries
 * Race: Required, 1 character in length, alphabet only
 * Height: Required, 3 characters in length, numeric only in FII format, where F is feet and I is inches
 * Weight: Required, 1-3 characters in length, numeric only in lbs, leading zeros to be entered systematically as necessary to change the length to 3 characters in the assembled query.
-* Hair: Required, 3-10 characters in length, alpha only
+* Hair: Required, 3-10 characters in length, alphabetical only
 * Offense: Required, 5-15 characters in length, any allowed
 * Date of Warrant/Violation: Required, 8 characters in length, numeric in MMDDYYYY format (allows dates from 1900 to today +1 day, to account for time zone differences)
 * Drivers License: Optional, 1-20 characters in length, any characters allowed, if included requires DL State & DL Expiration Year
@@ -41,10 +41,14 @@ Upon successful entry, a text message will be created, which consists of each of
 
 ## Change Report
 * Names Updated to accept as little as one character
-* Docs updated - DL Expiration Year replaced by Expiration Date per customer request previously, but docs not updated.
 * MKE fixed to match reqs.
 * OAI fixed to match reqs.
 * Updated reqs with submit and undo buttons.
+* Docs updated:
+  * Height and Weight field explanations updated
+  * DL Expiration Year replaced by Expiration Date per customer request previously.
+  * License plate requirements added (including License State and License Year)
+  * Submit and Undo button descriptions added
 
 ## Planned Updates
 * Race, Sex, and Offense input fields to be replaced by drop-down menus for ease of use; will still allow free-form entry for more unanticipated local requirements.
@@ -62,7 +66,7 @@ If you see a problem or a typo, please fork, make the necessary changes, and cre
 
 ## Copyright
 
-© DevMountain LLC, 2017. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
+© DevMountain LLC, 2018. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
 
 <p align="center">
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250">
