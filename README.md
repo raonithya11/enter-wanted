@@ -37,9 +37,7 @@ special: these are any characters other than numbers and letters, including blan
 Upon successful entry, a text blob will be created, which consists of each of the values entered, separated by a '.' - any optional fields left blank will still be denoted in the blob by an additional '.'
 
 ## Project Instructions
-This morning's stretch activity is a de-bugging treasure hunt!
-
-Your instructions are located in the JIRA task, EW-77
+Clone and build this project locally, then automate it locally as well.
 
 ## Contributions
 
@@ -47,7 +45,7 @@ If you see a problem or a typo, please fork, make the necessary changes, and cre
 
 ## Copyright
 
-© DevMountain LLC, 2017. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
+© DevMountain LLC, 2018. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
 
 <p align="center">
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250">
